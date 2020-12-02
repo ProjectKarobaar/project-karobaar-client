@@ -12,7 +12,7 @@
       </template>
 
       <template #right>
-        <vs-navbar-item :active="active == 'team'" id="team">
+        <vs-navbar-item to="/team" :active="active == 'team'" id="team">
           team
         </vs-navbar-item>
       </template>
@@ -29,4 +29,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.team-link {
+  color: #000;
+}
+</style>

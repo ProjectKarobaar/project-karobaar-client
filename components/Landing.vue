@@ -4,7 +4,8 @@
     <div class="hero--text">
       <h1 class="hero--heading">Project Karobaar</h1>
       <h3 class="hero--subheading">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        PROJECT KAROBAAR is an SaaS for local Businesses that provides various
+        solutions based on their needs.
       </h3>
     </div>
     <div class="hero-connect">
@@ -36,6 +37,7 @@ export default {
 }
 .hero--text {
   text-align: center;
+  padding: 0 1.5rem;
 }
 .hero--heading {
   font-weight: 700;
