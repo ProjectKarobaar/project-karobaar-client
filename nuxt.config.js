@@ -49,6 +49,6 @@ export default {
 
   router: {
     base:
-      process.env.NODE_ENV == 'production' ? '/project-karobaar-client/' : '/',
+      process.env.NODE_ENV === 'production' ? '/project-karobaar-client/' : '/',
   },
 }

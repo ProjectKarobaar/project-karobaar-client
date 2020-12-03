@@ -1,11 +1,11 @@
 <template>
   <div>
     <vs-navbar
+      v-model="active"
       color="#fff"
       square
-      shadowScroll
+      shadow-scroll
       center-collapsed
-      v-model="active"
     >
       <template #left>
         <nuxt-link to="/" class="branding">
@@ -14,7 +14,7 @@
       </template>
 
       <template #right>
-        <vs-navbar-item to="/team" :active="active == 'team'" id="team">
+        <vs-navbar-item id="team" to="/team" :active="active == 'team'">
           team
         </vs-navbar-item>
       </template>

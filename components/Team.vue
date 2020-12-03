@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <vs-card type="1" v-for="(member, index) in members" :key="index">
+    <vs-card v-for="(member, index) in members" :key="index" type="1">
       <template #title>
         <h3>{{ member.name }}</h3>
       </template>
