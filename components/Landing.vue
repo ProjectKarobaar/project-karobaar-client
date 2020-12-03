@@ -10,11 +10,21 @@
     </div>
     <div class="hero-connect">
       <h5 class="hero--caption">Connect us Here!</h5>
-      <a href="https://github.com/ProjectKarobaar" target="_blank">
-        <vs-button size="xl" color="transparent" circle icon floating>
-          <img src="icons/github.svg" class="social-icon" />
-        </vs-button>
-      </a>
+      <div class="link-icons">
+        <a href="https://github.com/ProjectKarobaar" target="_blank">
+          <vs-button size="xl" color="transparent" circle icon floating>
+            <img src="icons/github.svg" class="social-icon" />
+          </vs-button>
+        </a>
+        <a
+          href="https://docs.google.com/presentation/d/1_zXKY17Gap06smqytPBjeBAperFBCrWwoCAJSQqg4I8/edit#slide=id.p"
+          target="_blank"
+        >
+          <vs-button size="xl" color="transparent" circle icon floating>
+            <img src="icons/file.svg" class="social-icon" />
+          </vs-button>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -56,6 +66,16 @@ export default {
 }
 .hero--connect {
   text-align: center;
+}
+.hero--caption {
+  display: block;
+  text-align: center;
+}
+
+.link-icons {
+  display: flex;
+  gap: 16px;
+  padding: 18px 0;
 }
 @media only screen and (min-width: 600px) {
   .hero--image {

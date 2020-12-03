@@ -8,7 +8,9 @@
       v-model="active"
     >
       <template #left>
-        <img src="karobaarlogo.svg" class="branding" alt="" />
+        <nuxt-link to="/" class="branding">
+          <img src="karobaarlogo.svg" alt="" />
+        </nuxt-link>
       </template>
 
       <template #right>
@@ -32,5 +34,8 @@ export default {
 <style lang="scss" scoped>
 .team-link {
   color: #000;
+}
+.branding {
+  width: 300px;
 }
 </style>

@@ -11,9 +11,11 @@
         <p>{{ member.role }}</p>
       </template>
       <template #interactions>
-        <vs-button danger icon :href="member.insta" target="_blank">
-          <img class="insta" src="instagram.svg" />
-        </vs-button>
+        <a :href="member.insta" target="_blank">
+          <vs-button danger icon>
+            <img class="insta" src="instagram.svg" />
+          </vs-button>
+        </a>
       </template>
     </vs-card>
   </div>
