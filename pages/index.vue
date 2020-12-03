@@ -19,4 +19,9 @@ export default {
 .index-wrapper {
   padding-top: 3rem;
 }
+@media only screen and (min-width: 600px) {
+  .index-wrapper {
+    padding-top: 1.2rem;
+  }
+}
 </style>
