@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import LandingPage from '@/components/Landing'
+import LandingPage from '@/components/LandingPage'
 
 export default {
   layout: 'landinglayout',
