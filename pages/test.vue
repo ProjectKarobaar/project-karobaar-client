@@ -1,21 +1,9 @@
 <template>
   <div>
     <Card>
-      <Filters v-for="filter in filters" :key="filter.id">
-        <template #title>
-          <h4>{{ filter.title }}</h4>
-        </template>
-        <template #content>
-          <vs-radio
-            v-for="(item, idx) in filter.items"
-            :key="idx"
-            v-model="option"
-            val="1"
-          >
-            {{ item }}
-          </vs-radio>
-        </template>
-      </Filters>
+      <template #content>
+        <Filters v-for="(filter, idx) in filters" :key="idx" :filter="filter" />
+      </template>
     </Card>
   </div>
 </template>
@@ -23,15 +11,21 @@
 <script>
 export default {
   data: () => ({
-    option: false,
     filters: [
       {
         id: 1,
+        type: 'radio',
         title: 'Multi Range',
         items: ['All', '<= $10', '$10 - $100', '$100 - $500', '>= $500'],
       },
       {
         id: 2,
+        title: 'Price Range',
+        type: 'rangeslider',
+      },
+      {
+        id: 3,
+        type: 'radio',
         title: 'Categories',
         items: [
           'Appliances',
@@ -47,7 +41,8 @@ export default {
         ],
       },
       {
-        id: 3,
+        id: 4,
+        type: 'radio',
         title: 'Brands',
         items: [
           'Insignia™',
