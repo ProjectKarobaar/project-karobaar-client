@@ -1,65 +1,34 @@
 <template>
-  <div>
-    <Card>
-      <template #content>
-        <Filters v-for="(filter, idx) in filters" :key="idx" :filter="filter" />
-      </template>
-    </Card>
+  <div class="display__grid">
+    <FilterBar class="sidebar" />
+    <div class="cards"><ItemCard v-for="n in 6" :key="n" /></div>
   </div>
 </template>
 
 <script>
-export default {
-  data: () => ({
-    filters: [
-      {
-        id: 1,
-        type: 'radio',
-        title: 'Multi Range',
-        items: ['All', '<= $10', '$10 - $100', '$100 - $500', '>= $500'],
-      },
-      {
-        id: 2,
-        title: 'Price Range',
-        type: 'rangeslider',
-      },
-      {
-        id: 3,
-        type: 'radio',
-        title: 'Categories',
-        items: [
-          'Appliances',
-          'Audio',
-          'Cameras & Camcorders',
-          'Car Electronics & GPS',
-          'Cell Phones',
-          'Computers & Tablets',
-          'Health, Fitness & Beauty',
-          'Office & School Supplies',
-          'TV & Home Theater',
-          'Video Games',
-        ],
-      },
-      {
-        id: 4,
-        type: 'radio',
-        title: 'Brands',
-        items: [
-          'Insignia™',
-          'Samsung',
-          'Metra',
-          'HP',
-          'Apple',
-          'GE',
-          'Sony',
-          'Incipio',
-          'KitchenAid',
-          'Whirlpool',
-        ],
-      },
-    ],
-  }),
-}
+export default {}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.display__grid {
+  display: grid;
+  padding: 3rem;
+  gap: 32px;
+  grid-template-rows: auto;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: 'sidebar cards';
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+  .cards {
+    grid-area: cards;
+    display: grid;
+    gap: 32px;
+    width: 100%;
+    height: fit-content;
+    place-items: center;
+    grid-template-columns: repeat(3, 320px);
+  }
+}
+</style>
